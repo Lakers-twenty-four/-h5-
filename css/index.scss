@@ -2,7 +2,8 @@ body,
 div,
 i,
 span,
-a {
+a,
+img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,34 +18,29 @@ a {
 }
 
 body {
-    background-color: #ccc;
+    background-color: #f2f2f2;
 }
 
 @font-face {
     font-family: 'iconfont';
     src: url('../fonts/iconfont.eot');
-    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/iconfont.woff') format('woff'),
-    url('../fonts/iconfont.ttf') format('truetype'),
-    url('../fonts/iconfont.svg#iconfont') format('svg');  
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
 }
 
 .box {
     display: flex;
     flex-direction: column;
-    max-width: 1102px;
-    margin: 100px auto;
+    margin: 30px auto;
+    max-width: 550px;
     color: #fff;
-    font-size: 18px;
     .head_nav {
         .hotel,
         .scenery,
         .map,
         .fly {
             display: flex;
-            height: 180px;
-            border-radius: 18px;
-            font-size: 20px;
+            height: 90px;
+            border-radius: 4px;
             font-family: "楷体";
             overflow: hidden;
             .left {
@@ -53,32 +49,27 @@ body {
                 flex-direction: column; //主轴方向--从上到下
                 // align-content:space-around;
                 align-items: center;
-                justify-content: space-around;
-                width: 367px;
-                height: 180px;
+                justify-content: space-around; // height: 180px;
                 background-color: #FF697A; // background-image: linear-gradient(#fff,#FF697A);
                 border-right: 1px solid #ccc;
                 i {
-                    width: 86px;
-                    height: 86px;
-                    background: url("../img/un_ico_home_v620.png") 0 -250px;
-                }
-                span {
-                    font-size: 24px;
+                    width: 43px;
+                    height: 43px;
+                    background: url("../img/un_ico_home_v620.png") 0 -126px;
+                    background-size: 104px 328px;
                 }
             }
             .right {
                 display: flex;
                 flex: 2;
-                width: 734px;
                 flex-wrap: wrap;
                 align-content: flex-start; //在侧轴的头部开始排列
                 // background-color: #FF697A;
                 a {
-                    width: 366px;
-                    height: 90px;
+                    width: 50%;
+                    height: 45px;
                     text-align: center;
-                    line-height: 90px;
+                    line-height: 45px;
                     background-color: #FF697A; // background-image: linear-gradient(#fff,#FF697A);
                     color: inherit;
                 }
@@ -95,9 +86,10 @@ body {
             .left {
                 background-color: #3D98FF; // background-image: linear-gradient(#fff,#3D98FF);
                 i {
-                    width: 84px;
-                    height: 66px;
-                    background: url("../img/un_ico_home_v620.png") 0 -358px;
+                    width: 43px;
+                    height: 43px;
+                    background: url("../img/un_ico_home_v620.png") 0 -509px;
+                    background-size: 104px 328px;
                 }
             }
             .right {
@@ -111,9 +103,10 @@ body {
             .left {
                 background-color: #44C522; // background-image: linear-gradient(to top right,#fff,#44C522);
                 i {
-                    width: 84px;
-                    height: 66px;
-                    background: url("../img/un_ico_home_v620.png") 0 -466px;
+                    width: 43px;
+                    height: 43px;
+                    background: url("../img/un_ico_home_v620.png") 0 -568px;
+                    background-size: 104px 328px;
                 }
             }
             .right {
@@ -125,11 +118,18 @@ body {
         .fly {
             margin-top: 8px;
             .left {
-                background-color: hotpink; // background-image: linear-gradient(#fff,orange);
-                i {
-                    width: 84px;
-                    height: 66px;
-                    background: url("../img/un_ico_home_v620.png") 0 -570px;
+                background-color: #ccc;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 50%;
+                    color: inherit;
+                    background-color: hotpink; // background-image: linear-gradient(#fff,orange);
+                }
+                a:first-child {
+                    border-bottom: 2px solid #ccc;
                 }
             }
             .right {
@@ -137,31 +137,6 @@ body {
                     background-color: hotpink; // background-image: linear-gradient(#fff,orange);
                 }
             }
-        }
-    }
-    .sec2 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 12px;
-        border-radius: 18px;
-        overflow: hidden;
-        a {
-            display: flex;
-            justify-content: center; // align-content:space-around;
-            align-items: center;
-            width: 367px;
-            height: 88px;
-            background-color: orange;
-            color: inherit;
-        }
-        a:nth-child(-n+3) {
-            border-bottom: 1px solid #ccc;
-        }
-        a:nth-child(2),
-        a:nth-child(5) {
-            border-left: 1px solid #ccc;
-            border-right: 1px solid #ccc;
         }
     }
     .sec3_card {
@@ -175,14 +150,15 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            width: 274px;
-            height: 118px;
+            width: 25%;
+            height: 60px;
             background-color: #fff;
             border-right: 1px solid #ccc;
             i {
-                width: 40px;
-                height: 40px;
-                background: url("../img/icon_sprites.png") 0 -159px;
+                width: 20px;
+                height: 20px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(-n+4) {
@@ -192,44 +168,46 @@ body {
         div:last-child {
             border-right: none;
         }
-        div:nth-child(1) {
-            i {
-                background: url("../img/icon_sprites.png") 0 0;
-            }
-        }
         div:nth-child(2) {
             i {
-                background: url("../img/icon_sprites.png") 0 -40px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(3) {
             i {
                 background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(4) {
             i {
-                background: url("../img/icon_sprites.png") 0 -120px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(5) {
             i {
-                background: url("../img/icon_sprites.png") 0 -160px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(6) {
             i {
-                background: url("../img/icon_sprites.png") 0 -200px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(7) {
             i {
-                background: url("../img/icon_sprites.png") 0 -240px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
         div:nth-child(8) {
             i {
-                background: url("../img/icon_sprites.png") 0 -280px;
+                background: url("../img/icon_sprites.png") 0 -80px;
+                background-size: 20px 315px;
             }
         }
     }
@@ -239,87 +217,85 @@ body {
         margin-top: 12px;
         .left {
             display: flex;
-            flex-direction: column;
-            width: 551px;
-            height: 448px;
+            flex: 1;
+            flex-direction: column; // width: 551px;
+            // height: 448px;
             background-color: #fff;
             .title {
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-end;
-                width: 274px;
-                height: 64px;
+                flex-direction: row; // justify-content: center;
+                align-items: flex-end; // width: 274px;
+                // height: 64px;
                 i {
                     font-style: italic;
                     color: #FFA500;
-                    font-size: 24px;
-                    margin-right: 22px;
+                    margin-right: 6px;
                 }
                 span {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 75px;
-                    height: 38px;
+                    font-size: 12px;
+                    padding: 2px; // width: 75px;
+                    // height: 38px;
                     background-color: #ccc;
-                    border-radius: 10px;
+                    border-radius: 4px;
                 }
             }
             img {
-                width: 551px;
-                height: 385px;
+                width: 142px;
+                height: 98px;
             }
         }
         .right {
             display: flex;
-            flex-direction: column;
-            width: 551px;
-            height: 448px;
+            flex: 1;
+            flex-direction: column; // width: 551px;
+            // height: 448px;
             background-color: #fff;
             .title {
-                width: 551px;
+                // width: 551px;
                 display: flex;
                 flex-direction: row-reverse;
-                align-items: center;
-                //  justify-content: center;
+                align-items: center; //  justify-content: center;
                 // align-items: flex-end;
-                height: 64px;
+                // height: 64px;
                 span {
                     display: flex;
-                    justify-content: center;
-                    // align-items: center;
+                    justify-content: center; // align-items: center;
                     align-items: center;
-                    margin-right: 18px;
-                    width: 200px;
-                    height: 42px;
+                    margin-right: 4px;
+                    font-size: 12px;
+                    padding: 2px;
+                    padding-left: 10px; // width: 200px;
+                    // height: 42px;
                     background-color: #FF5476;
                     border-radius: 10px;
-                    .iconfont {  
+                    .iconfont {
                         // width: 20px;
                         // height: 20px;
-                        margin-left: 12px;
-                        height: 42px;
-                        line-height: 46px;
-                        font-size: 16px;
-                        color: #fff;
-                        // color: #FF5476;
-                        font-family:"iconfont";
+                        margin-left: 4px; // height: 42px;
+                        // line-height: 46px;
+                        color: #fff; // color: #FF5476;
+                        font-family: "iconfont";
                     }
                 }
             }
             img {
-                width: 551px;
-                height: 385px;
+                width: 142px;
+                height: 98px;
             }
         }
     }
-    .sec5_card {
+    .sec5_card {   
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        img {
-            width: 551px;
+        a {
+            width: 50%;
+            >img {
+                width: 100%;  
+                height: 100%;//坑
+            }
         }
     }
     .sec6_rel {
@@ -330,36 +306,38 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            width: 366px;
-            height: 90px;
+            flex:1; 
+            padding: 8px 0;
             background-color: #fff;
             color: #000;
             >i {
-                width: 36px;
-                height: 36px;
-                background: url("../img/un_ico_home_v620.png") -116px -306px;
+                width: 16px;
+                height: 17px;
+                background: url("../img/un_ico_home_v620.png") -60px -154px;
+                background-size: 104px 328px;
+            }
+            span {
+                font-size: 12px;
             }
         }
     }
     .sec7_footer {
         display: flex;
-        flex-direction:column;
-        margin-top: 32px;
-        color : #000;
+        flex-direction: column;
+        margin-top: 4px;
+        color: #000;
+        font-size: 12px;
         span {
-           display: flex; 
-           justify-content:center;
-           i {
-               width: 1px;
-               height: 24px;
-               background-color: #000;
-            //    margin-left: 8px;
-            //    margin-right: 8px;
-            margin: 0 8px;
-           }
+            display: flex;
+            justify-content: center;
+            i {
+                width: 1px;
+                height: 8px;  
+                background-color: #000; //    margin-left: 8px;
+                //    margin-right: 8px;
+                margin: 0 8px;
+                transform: translateY(50%);
+            }
         }
     }
 }
-
-
-
